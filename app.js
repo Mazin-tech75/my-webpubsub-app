@@ -1,4 +1,3 @@
-// Import required libraries
 const express = require('express');
 const { WebSocketServer } = require('ws');
 const { Configuration, OpenAIApi } = require('openai');
@@ -10,9 +9,11 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Set up OpenAI API configuration
-const openai = new OpenAIApi(new Configuration({
+const configuration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY,  // Make sure to set this in your Azure App Service environment variables
-}));
+});
+
+const openai = new OpenAIApi(configuration);
 
 // Define a basic route for the homepage
 app.get('/', (req, res) => {
@@ -57,5 +58,3 @@ wss.on('connection', (ws) => {
         console.log('WebSocket connection closed');
     });
 });
-
-
