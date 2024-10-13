@@ -4,7 +4,8 @@ const axios = require('axios');
 
 const app = express();
 const port = process.env.PORT || 3000;
-
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
 // Web PubSub Service connection string and Hub name
 const pubSubConnectionString = process.env.WEB_PUBSUB_CONNECTION_STRING;
 const hubName = 'chatHub';
