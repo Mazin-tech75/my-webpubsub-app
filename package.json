@@ -1,17 +1,18 @@
 {
   "name": "my-webpubsub-app",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "A web app using Azure Web PubSub",
+  "main": "app.js",
   "scripts": {
-  "test": "echo \"No tests specified\""
-}
+    "start": "node app.js",
+    "test": "echo \"No tests specified\""
+  },
   "keywords": [],
-  "author": "",
+  "author": "Your Name",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "@azure/web-pubsub-client": "^1.0.1",
-    "axios": "^1.7.7",
-    "express": "^4.21.1"
+    "express": "^4.17.1",
+    "axios": "^0.21.1",
+    "@azure/web-pubsub-client": "^1.0.0"
   }
 }
