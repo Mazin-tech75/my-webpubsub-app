@@ -44,8 +44,9 @@ app.post('/api/messages', express.json(), async (req, res) => {
     res.json({ status: 'Message broadcasted', aiResponse });
 });
 
-const port = process.env.PORT || 3000;  // Let Azure choose the port
+const port = process.env.PORT || 3000;  // Use the port Azure assigns or default to 3000 locally
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
+
 
